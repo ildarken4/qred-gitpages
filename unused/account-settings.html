@@ -31,13 +31,25 @@
 
     <!-- 
     
-    1) Все возможные блоки на одной странице.
-    2) в мобильной версии левый блок с инфой скрывается и остаётся только правый, внутри которого появляется раскрывающаяся информация о заёме
-    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=32-1961
-    моб: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=358-20382
+    1) Текст «Подтвердить почту» после подтверждения становится зеленым «Почта подтверждена»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-11413
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-33248
 
-    3) таймер в модалке подтверждения почты
-    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=115-12822
+    2) В модалке для создания паролей возможность скрыть-показать текст пароля
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-11616
+
+    3) В модалке для новой почты маска для инпута
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-11848
+
+    4) В модалке для нового телефона маска для инпута
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-11935
+
+    5) В модалке для подтверждения почты таймер 59 секунд и активация кнопки «Отправить ещё раз» при окончании таймера
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-12237
+
+    6) Зелёная подсказка «Изменения внесены» после внесения изменений
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-12418
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-33929
     
     -->
 
@@ -75,115 +87,109 @@
     </div>
 </header>
 
-        <div class="wrapper bg-lightgray py-14 relative overflow-hidden">
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
 
-                <div class="bg-darkblue text-center p-5 rounded-lg mb-5">
-    <div class="text-white font-bold md:text-[32px] mb-2.5">Добро пожаловать, <span class="block md:inline">Иванов Иван Иванович</span></div>
-    <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl mb-5">У вас есть активный заем</div>
-    <div class="bg-red text-white text-sm md:text-2xl lg:text-6xl font-bold px-7 lg:px-5 py-3 lg:py-2.5 w-fit mx-auto rounded-md mb-5">Платеж просрочен на <span>19</span> дней</div>
-    <div class="flex flex-col md:flex-row gap-2.5 md:gap-5 items-center justify-center">
-        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('set-password-modal')">
-            Задайте пароль
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('email-confirm-modal'); startEmailTimer()">
-            Подтвердите почту
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-    </div>
-</div>
-                <div
-    class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
-    <div class="account-banner w-full relative md:w-fit lg:min-w-[600px] xl:min-w-[830px] mx-auto text-center md:bg-white py-5 md:py-5 px-7 h-full">
-        <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0"></div>
-        <div class="text-blue_text relative z-10 text-xl md:text-4xl font-semibold mb-5 md:mb-8">
-            Активировать предложение по новому заему
-        </div>
-        <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
-            Активировать
-        </div>
-    </div>
-</div>
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-7 font-medium">
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Личный кабинет
+</h1>
 
+                    <div class="flex-col md:flex-row flex items-bottom gap-5 mb:gap-7 mb-10 pt-5 md:pt-0">
+                        <div class="basis-1/4 text-gray_text md:self-center">ФИО:</div>
 
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5">
+                            <div class="text-gray_text mb-1 md:mb-2.5 text-xs md:text-base">Фамилия</div>
+                            <div class="">Иванов</div>
+                        </div>
 
-                <div class="flex flex-col md:flex-row gap-5">
-                    <div class="bg-white rounded-lg shadow-md md:w-1/2 py-10 px-14 hidden md:block">
-                        <div class="w-full py-5 flex items-center justify-between border-b border-gray">
-                            <div class="text-gray_text max-w-[50%]">Номер договора</div>
-                            <div class="md:text-lg lg:text-2xl font-bold">№<span>12435445</span></div>
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5">
+                            <div class="text-gray_text mb-1 md:mb-2.5 text-xs md:text-base">Имя</div>
+                            <div class="">Иван</div>
                         </div>
-                        <div class="w-full py-5 flex items-center justify-between border-b border-gray">
-                            <div class="text-gray_text max-w-[50%]">Общая сумма долга</div>
-                            <div class="md:text-lg lg:text-2xl font-bold">21 000 руб.</span></div>
-                        </div>
-                        <div class="w-full py-5 flex items-center justify-between border-b border-gray">
-                            <div class="text-gray_text max-w-[50%]">Очередной платеж</div>
-                            <div class="md:text-lg lg:text-2xl font-bold">2 100 руб.</span></div>
-                        </div>
-                        <div class="w-full py-5 flex items-center justify-between border-b border-gray">
-                            <div class="text-gray_text max-w-[50%]">Рекомендованная дата платежа</div>
-                            <div class="md:text-lg lg:text-2xl font-bold">03.03.23</span></div>
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5">
+                            <div class="text-gray_text mb-1 md:mb-2.5 text-xs md:text-base">Отчество</div>
+                            <div class="">Иванович</div>
                         </div>
                     </div>
-                    <div
-                        class="js-loan-card bg-white rounded-lg shadow-md md:w-1/2 py-10 px-10 flex flex-col items-center">
 
-                        <div class="text-center font-medium text-sm md:hidden">Номер договора</div>
-<div class="text-center text-sm text-accent font-bold mb-5 md:hidden">№<span>12435445</span>
-</div>
+                    <div class="flex-col md:flex-row flex items-bottom gap-5 mb:gap-7 mb-10">
+                        <div class="basis-1/4 text-gray_text md:self-center">Контакты:</div>
 
-<form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto">
-    <div class="form-item">
-        <input type="text" class="payment-input input-sum mb-2.5" placeholder="Введите сумму" value="2100 руб.">
-    </div>
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5">
+                            <div class="text-gray_text mb-1 md:mb-2.5 text-xs md:text-base">Телефон</div>
+                            <div class="flex items-end justify-between">
+                                <span>8 (915) 422 65-56</span>
+                                <div class="block md:hidden cursor-pointer" onclick="openModal('change-phone-modal')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
 
-
-    <button class="btn btn-accent btn-squared w-full min-w-0 mb-5 md:mb-10">Оплатить</button>
-    <a href="#top"
-        class="schedule-btn text-2xl font-semibold hidden md:flex items-center gap-2 cursor-pointer hover:underlined">
-        График платежей
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-            <path d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#000000" stroke-width="2" />
-        </svg>
-    </a>
-</form>
-<div
-    class="js-loan-info border-b border-dashed border-gray mb-5 h-fit max-h-0 overflow-hidden transition-all text-blue_text md:hidden">
-    <div class="w-full py-2.5 flex items-center justify-between">
-        <div class="text-sm  max-w-[60%]">Общая сумма долга</div>
-        <div class=" font-bold basis-2/5">21 000 руб.</span></div>
-    </div>
-    <div class="w-full py-2.5 flex items-center justify-between">
-        <div class="text-sm  max-w-[60%]">Очередной платеж</div>
-        <div class=" font-bold basis-2/5">2 100 руб.</span></div>
-    </div>
-    <div class="w-full py-2.5 flex items-center justify-between mb-5">
-        <div class="text-sm  max-w-[60%]">Рекомендованная дата&nbsp;платежа</div>
-        <div class=" font-bold basis-2/5">03.03.23</span></div>
-    </div>
-
-    <a href="#top"
-        class="schedule-btn text-accent font-semibold flex items-center justify-center gap-2 cursor-pointer hover:underlined mb-5 transition-all hover:text-black group">
-        График платежей
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-            <path class="stroke-accent transition-all group-hover:stroke-black"
-                d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#000000" stroke-width="2" />
-        </svg>
-    </a>
-</div>
-
-<div class="js-show-info text-center font-medium cursor-pointer md:hidden">Подробнее о заеме
-</div>
-
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5">
+                            <div class="text-gray_text mb-1 md:mb-2.5 text-xs md:text-base">Почта</div>
+                            <div class="flex items-end justify-between">
+                                <span>i***an@mail.ru</span>
+                                <div class="block md:hidden cursor-pointer" onclick="openModal('email-confirm-modal')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5 pt-7 md:pt-0 flex items-end justify-between cursor-pointer"
+                            onclick="openModal('email-confirm-modal'); startEmailTimer()">
+                            <div class="text-blue_text">Подтвердить почту</div>
+                            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12L19 12M19 12L16 15M19 12L16 9" stroke="#F1C025" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg class="block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M2.57227 11.9996L21.4284 11.9996M21.4284 11.9996L12.0004 21.4277M21.4284 11.9996L12.0004 2.57155" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                     </div>
+
+                    <div class="flex-col md:flex-row flex items-bottom gap-5 mb:gap-7 md:pt-10">
+                        <div class="basis-1/4 text-gray_text md:self-center">Редактирование данных:</div>
+
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5 hidden md:flex items-end justify-between cursor-pointer"
+                            onclick="openModal('change-phone-modal')">
+                            <div class="text-blue_text">Изменить номер телефона</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12L19 12M19 12L16 15M19 12L16 9" stroke="#F1C025" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5 hidden md:flex items-end justify-between cursor-pointer"
+                            onclick="openModal('change-email-modal')">
+                            <div class="text-blue_text">Изменить почту</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12L19 12M19 12L16 15M19 12L16 9" stroke="#F1C025" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="basis-1/4 border-b border-darkgray pb-2.5 flex items-end justify-between cursor-pointer"
+                            onclick="openModal('set-password-modal')">
+                            <div class="text-blue_text">Изменить пароль</div>
+                            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12L19 12M19 12L16 15M19 12L16 9" stroke="#F1C025" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg class="block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M2.57227 11.9996L21.4284 11.9996M21.4284 11.9996L12.0004 21.4277M21.4284 11.9996L12.0004 2.57155" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
                 </div>
-
                 <div class="btn btn-account-menu">
     Меню
     <img src="img/buttons/menu.svg" alt="меню">
@@ -261,189 +267,7 @@
     </div>
 </div>
 
-
             </div>
-
-            
-<div class="schedule-modal fixed md:absolute bg-gray w-full h-full md:pt-14 translate-y-full transition-all top-0 overflow-auto z-50 px-5">
-    <div class="container h-full">
-
-        <div class="md:bg-white w-full rounded-t-[48px] h-full">
-            <div class="relative flex items-center justify-center md:justify-between py-5 md:py-11 border-b md:border-gray px-11">
-                <div class="md:text-3xl font-semibold">
-                    График платежей
-                </div>
-                <button class="schedule-close absolute md:relative right-0 border-red md:border rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path class="md:stroke-red" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-            <div class="pt-10">
-                <div class="schedule-row font-bold hidden md:flex">
-                    <div class="schedule-row__item">Рекомендованная <br> дата погашения</div>
-                    <div class="schedule-row__item">Платеж по графику</div>
-                    <div class="schedule-row__item">Просрочка</div>
-                    <div class="schedule-row__item">Сумма к оплате</div>
-                </div>
-                
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-row__item">
-                        <div class="text-blue_text">02.01.2024</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Платеж по графику
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
-
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Просрочка
-                        </div>
-                        <div class="basis-1/3 text-left text-blue_text">-</div>
-                    </div>
-                    <div class="schedule-row__item">
-                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
-                            Сумма к оплате
-                        </div>
-                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
-                    </div>
-                </div>
-                
-
-            </div>
-        </div>
-
-    </div>
-</div>
         </div>
 
         <div class="modal" id="set-password-modal">
@@ -512,7 +336,7 @@
     </div>
 </div>
 
- <div class="modal" id="email-confirm-modal">
+         <div class="modal" id="email-confirm-modal">
      <div class="popup">
          <div class="w-full max-w-[480px] mx-auto">
              <div class="flex items-center justify-center relative border-b pb-5 mb-5">
@@ -554,18 +378,78 @@
      </div>
  </div>
 
-<div class="notification bg-red_75">
-    <span>Не все поля заполнены</span>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="white" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-    </svg>
-</div>
+        <div class="modal" id="change-phone-modal">
+            <div class="popup">
+                <div class="w-full max-w-[480px] mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-medium">
+                            Изменить телефон
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
 
-<div class="notification bg-green_80">
-    <span>Почта подтверждена</span>
-    <img src="img/buttons/account-menu-close.svg" alt="Почта подтверждена">
-</div>
+                    <form action="" class="w-full max-w-sm mx-auto">
+                        <div class="form-item mb-10">
+                            <label for="update-tel">Новый номер телефона</label>
+                            <input type="tel" placeholder="Введите номер">
+
+                        </div>
+
+                        <button class="btn btn-accent w-full mx-auto mb-12 md:mb-0">
+                            Сохранить
+                        </button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="change-email-modal">
+            <div class="popup">
+                <div class="w-full max-w-[480px] mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-medium">
+                            Изменить почту
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <form action="" class="w-full max-w-sm mx-auto">
+                        <div class="form-item mb-10">
+                            <label for="confirm-password">Новая почта</label>
+                            <input type="text" class="email-input" placeholder="Введите почту">
+
+                        </div>
+
+                        <button class="btn btn-accent w-full mx-auto mb-12 md:mb-0">
+                            Сохранить
+                        </button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="notification success">
+            <span>Изменения внесены</span>
+            <img src="img/buttons/account-menu-close.svg" alt="закрыть">
+        </div>
 
         
         <!-- 
@@ -615,7 +499,6 @@
 </footer>
 
 <script src="./js/scripts.js"></script>
-
 
     </div>
 </body>

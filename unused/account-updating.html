@@ -28,13 +28,14 @@
 </head>
 
 <body>
-    <!--
-     
-    Добавлен баннер о рассмотрении заявки
-    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1170-12190&m=dev
+
+    <!-- 
+    
+    1) Зеленая подсказка «Изменения успешно внесены»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-21274
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-41457
     
     -->
-
 
     <div id="app">
         <a id="top"></a>
@@ -70,105 +71,104 @@
     </div>
 </header>
 
-        <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
-                
-                <div class="bg-darkblue text-center p-5 rounded-lg mb-5 md:mb-10">
-    <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl">Вам отказано в займе!</div>
-</div>
-                <div class="bg-white rounded-lg shadow-md py-[30px] md:py-10 px-2.5 md:px-10">
 
-                    <div class="max-w-[990px] mx-auto flex flex-col items-center">
-                        <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
-                            <img src="img/icons/mail-3d.png" width="100%" alt="отказ">
+                <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Убедитесь, что все данные актуальны
+</h1>
+
+                    <div class="w-full max-w-4xl text-blue_text mx-auto pt-5 md:pt-0">
+                        <div class="mb-5">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Паспортные данные</div>
+                                <a href="account-updating-passport.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Серия и номер:</span>
+                                    <span class="text-blue_text">1234 456789</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Адрес регистрации:</span>
+                                    <span class="text-blue_text">Москва, ул. Пушкина, д. 10к1, кв. 6</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Адрес фактического места жительства:</span>
+                                    <span class="text-blue_text">Санкт-Петербург, ул. Уточкина, д58, кв. 194</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <p class="text-center leading-5 md:text-2xl text-blue_text font-semibold  px-4">К сожалению, мы
-                            вынуждены отказать вам в займе. <span class="text-accent">Мы не называем точной причины
-                                отказа.</span> Возможно, у вас плохая кредитная история. Вы можете попробовать снова через 7
-                            дней</p>
+                        <div class="mb-5">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Занятость</div>
+                                <a href="account-updating-job.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Деятельность:</span>
+                                    <span class="text-blue_text">Работаю</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Место работы:</span>
+                                    <span class="text-blue_text">Банковское отделение “Сбербанк”</span>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="mb-10">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Почта</div>
+                                <a href="account-updating-email.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Почта:</span>
+                                    <span class="text-blue_text">pochta@mail.ru</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="account-without-loan.html" class="btn btn-accent max-w-md mx-auto">Подтвердить</a>
                     </div>
 
                 </div>
-                <div class="btn btn-account-menu">
-    Меню
-    <img src="img/buttons/menu.svg" alt="меню">
-</div>
-
-<div class="js-account-menu fixed top-0 left-0 h-screen w-screen bg-blue_08 backdrop-blur-sm translate-y-full transition-all z-50">
-    <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-5 px-2.5 md:px-[50px] pt-10 md:pt-36 overflow-auto max-h-screen pb-52">
-        
-        <a href="account-without-loan.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/account-main.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Главная
-            </div>
-        </a>
-    
-        <a href="account-my-cards.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/account-menu_card.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Мои Карты
-            </div>
-        </a>
-    
-        <a href="account-history.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/account-menu_history.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                История займов
-            </div>
-        </a>
-    
-        <a href="account-docs.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/account-menu_docs.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Документы
-            </div>
-        </a>
-    
-        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/account-menu_files.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Мои файлы
-            </div>
-        </a>
-    
-        <a href="account-my-appeals.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/my-appeals.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Мои обращения
-            </div>
-        </a>
-    
-        <a href="account-personal.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
-                <img src="img/icons/my-account.png" width="100%" alt="изображение пункта меню">
-            </div>
-            <div class="account-menu__title">
-                Мои данные
-            </div>
-        </a>
-    </div>
-    <div class="btn btn-account-menu fixed bottom-14 left-2.5 w-[calc(100%-20px)] md:w-52 md:left-[calc(50%-104px)]">
-        Закрыть
-        <img src="img/buttons/account-menu-close.svg" alt="закрыть">
-    </div>
-</div>
 
             </div>
+        </div>
+
+        <div class="notification bg-green_80">
+            <span>Изменения успешно внесены</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
         </div>
         
         <!-- 
@@ -219,7 +219,6 @@
 
 <script src="./js/scripts.js"></script>
 
-    </div>
 </body>
 
 </html>
